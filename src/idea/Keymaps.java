@@ -55,6 +55,8 @@ public class Keymaps {
          42 添加到收藏(add to favorites) ctrl+alt+f
          43 抽取方法(extract method)    alt+shift+m
          44 打开最近修改的文件(recently files) ctrl+e
+         45 更新代码(update project)    ctrl+t
+         46 提交代码(commit...)  ctrl+k
          */
     }
 }
