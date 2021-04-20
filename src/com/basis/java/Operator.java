@@ -24,10 +24,14 @@ public class Operator {
          * 3) 比较运算符低于算数运算符
          */
 
-        int a = 05;  // 八进制
-        int b = 011; // 八进制
-        int c = 0xF; // 十六进制
-        int d = 0x11; // 十六进制
+        // 八进制
+        int a = 05;
+        // 八进制
+        int b = 011;
+        // 十六进制
+        int c = 0xF;
+        // 十六进制
+        int d = 0x11;
 
         System.out.println(a);
         System.out.println(b);
