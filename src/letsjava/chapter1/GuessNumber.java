@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author ranlay.su
  * @date 2021-04-21 20:10
- * @desc
+ * @desc 猜数字游戏
  */
 public class GuessNumber {
     public static void main(String[] args) {
