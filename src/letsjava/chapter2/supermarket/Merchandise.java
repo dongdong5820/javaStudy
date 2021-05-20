@@ -11,4 +11,17 @@ public class Merchandise {
     public int count;
     public double soldPrice;
     public double purchasePrice;
+
+    /**
+     * 描述
+     */
+    public void describe(){
+        double netIncome = soldPrice - purchasePrice;
+        System.out.println("商品名字叫做" + name +
+                ", id是" + id +
+                ", 商品售价是" + soldPrice +
+                ", 商品进价是" + purchasePrice +
+                ", 商品库存量是" + count +
+                ", 销售一个毛利润是" + netIncome);
+    }
 }
