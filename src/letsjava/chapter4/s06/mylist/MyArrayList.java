@@ -65,88 +65,100 @@ public class MyArrayList<T> implements List<T> {
         throw new UnsupportedOperationException();
     }
 
+    // >> TODO 使用泛型后，在实现接口的时候，用泛型替代原来的Object
     @Override
     public boolean add(T t) {
-        return false;
+        if (curr == elements.length - 1) {
+            elements = new Object[elements.length * 2];
+        }
+        elements[curr] = t;
+        curr++;
+        return true;
     }
 
     @Override
     public boolean remove(Object o) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean addAll(Collection<? extends T> c) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends T> c) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void clear() {
-
+        curr = 0;
     }
 
+    // >> TODO 使用泛型之后，在实现接口的时候，用泛型代替原来的Object
+    @SuppressWarnings("unchecked")
     @Override
     public T get(int index) {
-        return null;
+        if (index > curr || index < 0) {
+            throw new IndexOutOfBoundsException("out of bound " + curr + " for " + index);
+        }
+
+        return (T) elements[index];
     }
 
     @Override
     public T set(int index, T element) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void add(int index, T element) {
-
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public T remove(int index) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        throw new UnsupportedOperationException();
     }
 
     @Override
-    public ListIterator<T> listIterator() {
-        return null;
+    public ListIterator listIterator() {
+        throw new UnsupportedOperationException();
     }
 
     @Override
-    public ListIterator<T> listIterator(int index) {
-        return null;
+    public ListIterator listIterator(int index) {
+        throw new UnsupportedOperationException();
     }
 
     @Override
-    public List<T> subList(int fromIndex, int toIndex) {
-        return null;
+    public List subList(int fromIndex, int toIndex) {
+        throw new UnsupportedOperationException();
     }
 }
