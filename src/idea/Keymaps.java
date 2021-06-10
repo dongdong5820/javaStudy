@@ -19,17 +19,18 @@ public class Keymaps {
          8 向上移动行(move statement up) alt+up
          9 向下开始新的一行(start new line) shift+enter
          10 向上开始新的一行(start new line before current) ctrl+shift+enter
+
          11 如何查看源码(class)   ctrl+选中指定的结构 或 ctrl+shift+t x
          12 万能纠错/生成返回值变量    alt+enter
          13 返回到前一个编辑的页面(back)     alt+left
          14 进入到下一个编辑的页面(forward)    alt+right
          15 查看继承关系(type hierarchy)  F4
-
          16 格式化代码(reformat code)    ctrl+shift+F
          17 提示方法参数类型(Parameter Info)    ctrl+alt+/ x
          18 复制代码    ctrl+c
          19 撤销  ctrl+z
          20 反撤销 ctrl+y
+
          21 剪切  ctrl+x
          22 粘贴  ctrl+v
          23 保存  ctrl+s
@@ -51,12 +52,15 @@ public class Keymaps {
          38 查找(全局)  ctrl+h
          39 查找文件    double shift
          40 查看类的继承结构图(show uml diagram) ctrl+shift+u
+
          41 查看方法的多层重写结构(method hierarchy)   ctrl+alt+h
          42 添加到收藏(add to favorites) ctrl+alt+f
          43 抽取方法(extract method)    alt+shift+m
          44 打开最近修改的文件(recently files) ctrl+e
          45 更新代码(update project)    ctrl+t
          46 提交代码(commit...)  ctrl+k
+         47 自动抽取变量 ctrl+alt+v
+
          */
     }
 }
