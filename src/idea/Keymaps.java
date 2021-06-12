@@ -14,7 +14,8 @@ public class Keymaps {
          3 单行注释 ctrl+/
          4 多行注释 ctrl+shift+/
          5 向下复制一行(Duplicate Lines)  ctrl+alt+down
-         6 删除一行或选中行(delete line)  ctrl+d
+         6 复制一行(Duplicate Line or Selection)  ctrl+d
+            删除一行(Delete Line) ctrl+y
          7 向下移动行(move statement down)   alt+down
          8 向上移动行(move statement up) alt+up
          9 向下开始新的一行(start new line) shift+enter
@@ -29,7 +30,7 @@ public class Keymaps {
          17 提示方法参数类型(Parameter Info)    ctrl+alt+/ x
          18 复制代码    ctrl+c
          19 撤销  ctrl+z
-         20 反撤销 ctrl+y
+         20 反撤销(Redo) ctrl+shit+z
 
          21 剪切  ctrl+x
          22 粘贴  ctrl+v
