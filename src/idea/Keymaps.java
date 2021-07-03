@@ -60,7 +60,7 @@ public class Keymaps {
          44 打开最近修改的文件(recently files) ctrl+e
          45 更新代码(update project)    ctrl+t
          46 提交代码(commit...)  ctrl+k
-         47 自动抽取变量 ctrl+alt+v
+         47 自动抽取变量(variable) alt+e
 
          */
     }
