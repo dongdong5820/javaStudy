@@ -2,6 +2,8 @@ package com.basis.java;
 
 import com.utils.DateUtil;
 
+import java.util.Calendar;
+
 /**
  * @author: Ranlay.su
  * @date: 2021-07-06 20:53
@@ -18,5 +20,27 @@ public class DateTime {
         // 时间戳转日期
         dateStr = DateUtil.timestampToDate(String.valueOf(dateTime), format);
         System.out.println(dateStr);
+        Integer year = 2020;
+        System.out.println(year + "年的开始时间戳为： " + DateUtil.getYearStartTime(year));
+        System.out.println(year + "年的结束时间戳为： " + DateUtil.getYearEndTime(year));
+
+        Long timestamp = System.currentTimeMillis();
+        System.out.println("当前年的开始时间戳为： " + DateUtil.getYearStartTime(timestamp));
+        System.out.println("当前年的结束时间戳为： " + DateUtil.getYearEndTime(timestamp));
+
+        testCalendar();
+    }
+
+    public static void testCalendar() {
+        System.out.println("============================");
+        Calendar calendar = Calendar.getInstance();
+        System.out.println(calendar.get(Calendar.YEAR) + "年");
+        System.out.println((calendar.get(Calendar.MONTH) + 1) + "月");
+        System.out.println(calendar.get(Calendar.DATE) + "日");
+        // 24小时制
+        System.out.println(calendar.get(Calendar.HOUR_OF_DAY) + "时");
+        System.out.println(calendar.get(Calendar.MINUTE) + "分");
+        System.out.println(calendar.get(Calendar.SECOND) + "秒");
+        System.out.println(calendar.get(Calendar.MILLISECOND) + "毫秒");
     }
 }

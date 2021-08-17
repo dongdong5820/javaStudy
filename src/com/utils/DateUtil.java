@@ -1,6 +1,7 @@
 package com.utils;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -51,5 +52,76 @@ public class DateUtil {
         long time = System.currentTimeMillis();
         String t = String.valueOf(time / 1000);
         return t;
+    }
+
+    /**
+     * 获取当年的开始时间戳
+     *
+     * @param timeStamp 毫秒级时间戳
+     * @return
+     */
+    public static Long getYearStartTime(Long timeStamp) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(timeStamp);
+        calendar.add(Calendar.YEAR, 0);
+        calendar.add(Calendar.DATE, 0);
+        calendar.add(Calendar.MONTH, 0);
+        return getYearStartTime(calendar);
+    }
+
+    /**
+     * 获取某年的开始时间戳(毫秒级)
+     * @param year 年
+     * @return
+     */
+    public static Long getYearStartTime(Integer year) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, year);
+        return getYearStartTime(calendar);
+    }
+
+    private static Long getYearStartTime(Calendar calendar) {
+        calendar.set(Calendar.DAY_OF_YEAR, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        return calendar.getTimeInMillis();
+    }
+
+    /**
+     * 获取当年的结束时间戳
+     *
+     * @param timeStamp 毫秒级时间戳
+     * @return
+     */
+    public static Long getYearEndTime(Long timeStamp) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(timeStamp);
+        int year = calendar.get(Calendar.YEAR);
+        calendar.clear();
+        calendar.set(Calendar.YEAR, year);
+        return getYearEndTime(calendar);
+    }
+
+    /**
+     * 获取某年的结束时间戳(毫秒级)
+     * @param year 年
+     * @return
+     */
+    public static Long getYearEndTime(Integer year) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.clear();
+        calendar.set(Calendar.YEAR, year);
+        return getYearEndTime(calendar);
+    }
+
+    private static Long getYearEndTime(Calendar calendar) {
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 59);
+        calendar.set(Calendar.SECOND, 59);
+        calendar.set(Calendar.MILLISECOND, 999);
+        calendar.roll(Calendar.DAY_OF_YEAR, -1);
+        return calendar.getTimeInMillis();
     }
 }
